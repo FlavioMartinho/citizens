@@ -2,13 +2,13 @@
 
 ## React Redux Saga / ASP.NET Core EF Core / PostgreSQL / Docker
 
-Simples aplicação de pessoas utilizando react com redux saga no frontend, ASP.Net Core com EF Core no backend e um banco de dados PostgreSQL. Tudo isso em um ambiente configurado em Docker utilizando docker compose.
+Simples aplicação de pessoas utilizando react com redux saga no frontend, ASP.Net Core com EF Core no backend e um banco de dados PostgreSQL. Tudo isso em um ambiente configurado em Docker utilizando docker compose com base Linux.
 
-##Iniciando ambiente:
+## Iniciando ambiente
 
-###Subindo aplicação com Docker Compose
+### Subindo aplicação com Docker Compose
 
-1. Instale `Docker para Linux`, `Docker para Mac` ou `Docker para Windows` (necessário também Docker-Compose)
+1. Instale `Docker para Linux`, `Docker para Mac` ou `Docker para Windows*` (necessário também Docker-Compose)
 
 1. Abra um terminal ou promp de comandos.
 
@@ -18,7 +18,9 @@ Simples aplicação de pessoas utilizando react com redux saga no frontend, ASP.
 
 1. Acesse http://localhost:8080 no seu navegador para visualizar a aplicação.
 
-###TODOs:
+\* Utilizar containers para Linux
+
+### TODOs
 
 - Adicionar validações para CRUD no backend.
 - Adicionar loading para as requests no frontend.
