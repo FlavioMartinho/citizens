@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+
+  webapp:
+    container_name: 'citizenswebapp'
+    image: 'citizenswebapp'
+    build:
+      context: ./citizens/webapp
+      dockerfile: Dockerfile
+    ports:
+     - "8080:80"
+    depends_on:
+     - "app"
+    networks:
+      - citizensapp-network
+
+  app:
+    container_name: 'citizensapp'
+    image: 'citizensapp'
+    build:
+      context: ./citizens/app
+      dockerfile: Dockerfile
+    volumes:
+      - ./citizens/app:/var/www/citizensapp
+    ports:
+     - "5000:5000"
+    depends_on:
+     - "postgres"
+    networks:
+      - citizensapp-network
+
+  postgres:
+    container_name: 'postgres-alpine'
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+     - "5432:5432"
+    networks:
+      - citizensapp-network
+
+networks:
+  citizensapp-network:
+    driver: bridge
+
