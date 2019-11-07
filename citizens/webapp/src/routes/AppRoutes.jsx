@@ -25,7 +25,7 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 
-export default AppRoutes = () => {
+const AppRoutes = () => {
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -57,3 +57,5 @@ export default AppRoutes = () => {
     </ThemeProvider>
   );
 };
+
+export default AppRoutes;
